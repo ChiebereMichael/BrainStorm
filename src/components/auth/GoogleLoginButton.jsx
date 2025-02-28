@@ -5,11 +5,11 @@ import { signInWithRedirect } from "firebase/auth";
 
 const GoogleLoginButton = () => {
   const navigate = useNavigate();
-
   const handleGoogleLogin = async () => {
     try {
-      provider.setCustomParameters({ prompt: "select_account" }); // ✅ Set this before redirect
-      await signInWithRedirect(auth, provider); // ✅ No need to store result here
+      provider.setCustomParameters({ prompt: "select_account" }); // ✅ Ensures user picks an account
+      await signInWithRedirect(auth, provider); // ✅ Redirects to Google login
+      navigate("/dashboard"); // ✅ Redirects to dashboard after login
     } catch (error) {
       console.error("Google Login Error:", error);
     }
