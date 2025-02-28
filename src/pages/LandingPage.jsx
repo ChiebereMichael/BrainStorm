@@ -58,7 +58,7 @@ function LandingPage() {
         <div className="mt-10 md:mt-24">
           <GetStarted />
         </div>
-        
+        <div className="w-full border-t-1 border-gray-300 my-6"></div>
         {/* Footer */}
         <Footer />
       </div>
