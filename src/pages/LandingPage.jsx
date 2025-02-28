@@ -1,11 +1,13 @@
-import React from "react";
+import React  from "react";
 import Navbar from "../components/landingpage/Navbar";
 import { assets } from "../assets/assets";
 import Avatar from "../components/landingpage/Avatar";
+import { useNavigate } from "react-router-dom";
 import Footer from "../components/landingpage/Footer";
 import GetStarted from "../components/landingpage/GetStarted";
 
 function LandingPage() {
+  const navigate = useNavigate();
   return (
     <div className="relative overflow-hidden scroll-behavior-smooth">
       <div
@@ -27,7 +29,7 @@ function LandingPage() {
                 action.
               </p>
               <div className="flex justify-center xl:justify-start mt-6 sm:mt-8">
-                <button className="text-white text-sm sm:text-base bg-textGreen px-5 sm:px-6 md:px-8 py-2 md:py-3 rounded-xl hover:bg-textHover transition duration-300">
+                <button onClick={() => navigate('./signup')} className="text-white text-sm sm:text-base bg-textGreen px-5 sm:px-6 md:px-8 py-2 md:py-3 rounded-xl hover:bg-textHover transition duration-300">
                   Get Started
                 </button>
               </div>

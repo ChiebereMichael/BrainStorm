@@ -1,10 +1,10 @@
 import React from 'react'
-import LandingPage from './pages/LandingPage'
+import RouterPath from './routing/RouterPath'
 
 function App() {
   return (
     <div>
-       <LandingPage/>
+       <RouterPath/>
     </div>
   )
 }

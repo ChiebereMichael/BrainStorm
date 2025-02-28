@@ -1,5 +1,5 @@
 import React from "react";
-import { FaXTwitter, FaInstagram, FaGithub } from "react-icons/fa6";
+import { FaXTwitter, FaInstagram, FaGoogle, FaGithub } from "react-icons/fa6";
 // import { PiThreadsFill } from 'react-icons/pi';
 function Footer() {
   return (
