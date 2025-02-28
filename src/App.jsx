@@ -1,12 +1,12 @@
-import React from 'react'
-import RouterPath from './routing/RouterPath'
-
+import React from "react";
+import RouterPath from "./routing/RouterPath";
+import { BrowserRouter as Router } from "react-router-dom";
 function App() {
   return (
-    <div>
-       <RouterPath/>
-    </div>
-  )
+    <Router>
+      <RouterPath />
+    </Router>
+  );
 }
 
-export default App
+export default App;
