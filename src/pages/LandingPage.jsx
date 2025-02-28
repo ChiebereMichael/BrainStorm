@@ -1,13 +1,16 @@
-import React  from "react";
+import React from "react";
 import Navbar from "../components/landingpage/Navbar";
 import { assets } from "../assets/assets";
 import Avatar from "../components/landingpage/Avatar";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/landingpage/Footer";
 import GetStarted from "../components/landingpage/GetStarted";
+import { getAuth } from "firebase/auth"; // Import Firebase auth
 
 function LandingPage() {
   const navigate = useNavigate();
+  const auth = getAuth();
+  const user = auth.currentUser; // ✅ Get the logged-in user
   return (
     <div className="relative overflow-hidden scroll-behavior-smooth">
       <div
@@ -15,7 +18,7 @@ function LandingPage() {
         style={{ backgroundImage: `url(${assets.background})` }}
       >
         <Navbar />
-        
+
         {/* Hero Section */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col xl:flex-row items-center justify-between pt-10 md:pt-16 lg:pt-20">
@@ -29,9 +32,21 @@ function LandingPage() {
                 action.
               </p>
               <div className="flex justify-center xl:justify-start mt-6 sm:mt-8">
-                <button onClick={() => navigate('./signup')} className="text-white text-sm sm:text-base bg-textGreen px-5 sm:px-6 md:px-8 py-2 md:py-3 rounded-xl hover:bg-textHover transition duration-300">
-                  Get Started
-                </button>
+                {user ? (
+                  <button
+                    onClick={() => navigate("/dashboard")}
+                    className=" text-white text-sm sm:text-base bg-textGreen px-5 sm:px-6 md:px-8 py-2 md:py-3 rounded-xl hover:bg-textHover transition duration-300 "
+                  >
+                    Get Started
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => navigate("/signup")}
+                    className=" text-white text-sm sm:text-base bg-textGreen px-5 sm:px-6 md:px-8 py-2 md:py-3 rounded-xl hover:bg-textHover transition duration-300 "
+                  >
+                    Get Started
+                  </button>
+                )}
               </div>
             </div>
             <div className="w-full xl:w-2/5 flex justify-center xl:justify-end">
@@ -39,7 +54,7 @@ function LandingPage() {
             </div>
           </div>
         </div>
-        
+
         {/* How It Works Section */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-10 md:mt-20">
           <div className="max-w-4xl mx-auto">
@@ -49,13 +64,13 @@ function LandingPage() {
             <p className="mt-4 text-center text-textGray text-sm sm:text-base md:text-lg mx-auto">
               Tired of searching for the perfect gaming squad, coding buddy, or
               research partner? BrainStorm is where gamers, developers, and
-              researchers team up to create awesome things—fast. No endless chats,
-              no complicated sign-ups. Just post your idea, find your crew, and
-              get started! 🎉
+              researchers team up to create awesome things—fast. No endless
+              chats, no complicated sign-ups. Just post your idea, find your
+              crew, and get started! 🎉
             </p>
           </div>
         </div>
-        
+
         {/* Get Started Section */}
         <div className="mt-10 md:mt-24">
           <GetStarted />
