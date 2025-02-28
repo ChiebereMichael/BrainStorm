@@ -10,6 +10,7 @@ import illustration from './illustration.png';
 import logo from './logo.jpeg';
 import background from './background.png';
 import green from './green.jpg';
+import google from './google.png'
 
 export const assets = {
     avatar,
@@ -17,6 +18,7 @@ export const assets = {
     avatar3,
     avatar4,
     avatar5,
+    google,
     avatar6,
     avatar7,
     avatar8,
