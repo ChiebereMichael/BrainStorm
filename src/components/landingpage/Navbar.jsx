@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className="flex justify-between px-5 pt-5 w-full">
       <div className="flex ">
-        {/* <img src={assets.logo} alt="logo"className="w-6 h-auto rounded-xl"  /> */}
+        <img src={assets.green} alt="logo"className="w-8 pr-0.5 h-8 pt-1 rounded-2xl"  />
         <h2 className="text-textGreen text-xl md:text-2xl font-extrabold">BrainStorm</h2>
       </div>
       <Button/>

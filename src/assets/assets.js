@@ -9,6 +9,7 @@ import avatar8 from './avatar8.png';
 import illustration from './illustration.png';
 import logo from './logo.jpeg';
 import background from './background.png';
+import green from './green.jpg';
 
 export const assets = {
     avatar,
@@ -21,5 +22,7 @@ export const assets = {
     avatar8,
     logo,
     illustration,
-    background
+    background,
+    green
 }
+

@@ -11,9 +11,13 @@ function Footer() {
           <p>All rights reserved.</p>
         </div>
         <div className="flex space-x-4  justify-center md:justify-end xl:justify-end">
-          <FaXTwitter size={24} className="hover:text-textGreen" />
-          <FaInstagram size={24} className="hover:text-textGreen" />
-          <FaGithub size={24} className="hover:text-textGreen" />
+          <a href="https://x.com/ClassicMike17 " target="_blank" rel="noreferrer">
+            <FaXTwitter size={24} className="hover:text-textGreen transition-transform duration-300 hover:scale-130" />
+          </a>
+          <FaInstagram size={24} className="hover:text-textGreen transition-transform duration-300 hover:scale-130" />
+          <a href="https://github.com/ChiebereMichael" target="_blank" rel="noreferrer">
+            <FaGithub size={24} className="hover:text-textGreen transition-transform duration-300 hover:scale-130" />
+          </a>
         </div>
       </div>
     </div>
