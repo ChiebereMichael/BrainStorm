@@ -7,7 +7,7 @@ import Footer from "../components/landingpage/Footer";
 import GetStarted from "../components/landingpage/GetStarted";
 import { getAuth } from "firebase/auth"; // Import Firebase auth
 
-function LandingPage() {
+function LandingPage({ onLoginClick }) {
   const navigate = useNavigate();
   const auth = getAuth();
   const user = auth.currentUser; // ✅ Get the logged-in user
@@ -34,7 +34,7 @@ function LandingPage() {
               <div className="flex justify-center xl:justify-start mt-6 sm:mt-8">
                 {user ? (
                   <button
-                    onClick={() => navigate("/dashboard")}
+                   onClick={onLoginClick}
                     className=" text-white text-sm sm:text-base bg-textGreen px-5 sm:px-6 md:px-8 py-2 md:py-3 rounded-xl hover:bg-textHover transition duration-300 "
                   >
                     Get Started
