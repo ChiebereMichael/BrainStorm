@@ -17,7 +17,7 @@ const positions = [
 
 const Avatar = () => {
   return (
-    <div className="mt-10 mb-20 flex justify-center bg-transparent mr-10">
+    <div className="mt-10 mb-20 flex justify-center bg-transparent mr-5">
       <div className="relative w-120 h-95 hidden xl:flex">
         {avatars.map((avatar, index) => (
           <div key={index} className={`absolute ${positions[index]}`}>

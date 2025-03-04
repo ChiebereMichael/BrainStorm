@@ -4,6 +4,9 @@ import { getAuth, getRedirectResult, onAuthStateChanged } from "firebase/auth";
 import LandingPage from "../pages/LandingPage";
 import Signup from "../pages/Signup";
 import Dashboard from "../pages/Dashboard";
+import Layout from "../components/dashboard/Layout";
+import Gaming from "../pages/Gaming";
+import Sidebar from "../components/dashboard/Sidebar";
 
 function RouterPath() {
   const navigate = useNavigate();
@@ -17,7 +20,7 @@ function RouterPath() {
       .then((result) => {
         if (result?.user) {
           console.log("User signed in via redirect:", result.user);
-          navigate("/dashboard");
+          navigate("/layout");
         }
       })
       .catch((error) => {
@@ -36,21 +39,21 @@ function RouterPath() {
   // This function checks auth status and routes accordingly
   const handleLoginClick = () => {
     if (user) {
-      navigate("/dashboard");
+      navigate("/layout");
     } else {
       navigate("/signup");
     }
   };
+console.log(user);
 
-  // Add console log to debug
-  console.log("Rendering RouterPath component");
 
   return (
     <Routes>
       <Route path="/" element={<LandingPage onLoginClick={handleLoginClick} />} />
       <Route path="/landing" element={<LandingPage onLoginClick={handleLoginClick} />} />
       <Route path="/signup" element={<Signup />} />
-      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/layout" element={<Layout/>} />
+      <Route path="/gaming" element={<Gaming/>} />
     </Routes>
   );
 }
