@@ -12,7 +12,7 @@ function LandingPage({ onLoginClick }) {
   const auth = getAuth();
   const user = auth.currentUser; // ✅ Get the logged-in user
   return (
-    <div className="relative overflow-hidden scroll-behavior-smooth">
+    <div className="relative overflow-hidden scroll-smooth">
       <div
         className="bg-cover bg-black bg-opacity-50 w-full min-h-screen"
         style={{ backgroundImage: `url(${assets.background})` }}

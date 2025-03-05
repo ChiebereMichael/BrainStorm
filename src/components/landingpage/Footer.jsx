@@ -12,11 +12,11 @@ function Footer() {
         </div>
         <div className="flex space-x-4  justify-center md:justify-end xl:justify-end">
           <a href="https://x.com/ClassicMike17 " target="_blank" rel="noreferrer">
-            <FaXTwitter size={24} className="hover:text-textGreen transition-transform duration-300 hover:scale-130" />
+            <FaXTwitter size={24} className="hover:text-textGreen hover:animate-spin transition-transform duration-300 hover:scale-130" />
           </a>
-          <FaInstagram size={24} className="hover:text-textGreen transition-transform duration-300 hover:scale-130" />
+          <FaInstagram size={24} className="hover:text-textGreen hover:animate-bounce transition-transform duration-300 hover:scale-130" />
           <a href="https://github.com/ChiebereMichael" target="_blank" rel="noreferrer">
-            <FaGithub size={24} className="hover:text-textGreen transition-transform duration-300 hover:scale-130" />
+            <FaGithub size={24} className="hover:text-textGreen hover:animate-bounce transition-transform duration-300 hover:scale-130" />
           </a>
         </div>
       </div>
