@@ -67,7 +67,7 @@ const Sidebar = ({ isOpen, onClose }) => {
           <SidebarItem
             to={'/dashboard/myposts'}
             icon={<FaBookmark size={20} />}
-            label="Saved Posts"
+            label="My Posts"
             onClose={onClose}
           />
           <SidebarItem

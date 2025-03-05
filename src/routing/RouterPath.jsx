@@ -10,6 +10,7 @@ import Development from "../pages/Development";
 import Research from "../pages/Research";
 import MyPosts from "../pages/MyPosts";
 import Settings from "../pages/Settings";
+import Profile from "../pages/Profile";
 
 
 function RouterPath() {
@@ -65,6 +66,8 @@ console.log(user);
           <Route path="research" element={<Research/>} />
           <Route path="myposts" element={<MyPosts/>} />
           <Route path="settings" element={<Settings/>} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="*" element={<h1>Not Found</h1>} />
         </Route>
     </Routes>
   );

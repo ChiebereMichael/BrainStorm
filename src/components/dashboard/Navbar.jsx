@@ -1,20 +1,22 @@
 import React from "react";
 import { FaBars, FaUser, FaSearch, FaPlusCircle } from "react-icons/fa";
 import { assets } from "../../assets/assets";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = ({ onMenuToggle }) => {
+  const navigate = useNavigate();
   return (
     <nav className="bg-light shadow-md p-2 flex justify-between items-center">
       <div className="flex items-center">
-        <button className="lg:hidden mr-4" onClick={onMenuToggle}>
-          <FaBars className="text-xl" />
+        <button className="lg:hidden mr-4 " onClick={onMenuToggle}>
+          <FaBars className="text-xl text-white" />
         </button>
-        <div className="flex ">
-          <img
+        <div className=" ">
+          {/* <img
             src={assets.green}
             alt="logo"
             className="w-8 pr-0.5 h-8 pt-1.1 md:pt-1 rounded-2xl"
-          />
+          /> */}
           <h2 className="text-textGreen text-xl md:text-2xl font-bold">
             BrainStorm
           </h2>
@@ -28,7 +30,7 @@ const Navbar = ({ onMenuToggle }) => {
           <FaSearch className=" text-white" size={18}/>
         </div>
         <div className="w-8 h-8 bg-textHover cursor-pointer rounded-full flex items-center justify-center">
-          <FaUser className="text-white" size={18} />
+          <FaUser className="text-white" size={18} onClick={()=> {navigate("./profile")}}/>
         </div>
       </div>
     </nav>

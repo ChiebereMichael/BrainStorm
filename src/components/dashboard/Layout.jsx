@@ -17,12 +17,13 @@ const Layout = () => {
 
   return (
     <div>
+       {/* Navbar */}
       <Navbar onMenuToggle={toggleSidebar} />
       <div className="flex h-screen bg-back text-white">
         {/* Overlay for mobile sidebar */}
         {isSidebarOpen && (
           <div
-            className="fixed inset-0 opacity-50 bg-back z-40 lg:hidden"
+            className="fixed inset-0 opacity-50 bg-white z-40 lg:hidden"
             onClick={closeSidebar}
           />
         )}
@@ -32,9 +33,7 @@ const Layout = () => {
           onClose={closeSidebar}
         />
         {/* Main Content Area */}
-        <div className="flex-1 flex flex-col">
-          {/* Navbar */}
-         
+        <div className="flex-1 flex flex-col">         
           {/* Page Content */}
           <div className="p-6 bg-back flex-1 overflow-y-auto">
             <Outlet />
