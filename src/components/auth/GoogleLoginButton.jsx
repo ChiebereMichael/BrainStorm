@@ -18,7 +18,7 @@ const GoogleLoginButton = () => {
 
   return (
     <button
-      onClick={()=>{navigate("/layout")}}
+      onClick={()=>{navigate("/dashboard")}}
       className="text-base px-6 py-1 md:px-8 md:py-1.5 mt-6 bg-textGreen text-white rounded-md hover:bg-textHover transition"
     >
       Sign in with Google
