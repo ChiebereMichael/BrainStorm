@@ -1,8 +1,10 @@
 import { auth, provider } from "./firebase";
 import React from "react";
 import { getRedirectResult, signInWithRedirect } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 const GoogleLoginButton = () => {
+  const navigate = useNavigate();
   
   const handleGoogleLogin = async () => {
     try {
@@ -16,7 +18,7 @@ const GoogleLoginButton = () => {
 
   return (
     <button
-      onClick={handleGoogleLogin}
+      onClick={()=>{navigate("/layout")}}
       className="text-base px-6 py-1 md:px-8 md:py-1.5 mt-6 bg-textGreen text-white rounded-md hover:bg-textHover transition"
     >
       Sign in with Google
