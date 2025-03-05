@@ -11,7 +11,7 @@ function Button() {
     <div>
       {user ? (
         <button
-          onClick={() => navigate("/dashboard")}
+          onClick={() => navigate("/layout")}
           className=" text-white text-base bg-textGreen px-6 py-1 md:px-8 md:py-1.5 rounded-xl hover:bg-textHover "
         >
           Find Your Team

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Layout from "../components/dashboard/Layout";
+import Welcome from "../components/dashboard/Welcome";
 
 function Dashboard() {
   return (
       <div className="">
-        <h1>Welcome to my dashboard</h1>
+        <Welcome/>
       </div>
   );
 }

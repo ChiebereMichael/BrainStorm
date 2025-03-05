@@ -1,8 +1,9 @@
 import { auth, provider } from "./firebase";
 import React from "react";
-import { signInWithRedirect } from "firebase/auth";
+import { getRedirectResult, signInWithRedirect } from "firebase/auth";
 
 const GoogleLoginButton = () => {
+  
   const handleGoogleLogin = async () => {
     try {
       provider.setCustomParameters({ prompt: "select_account" });
