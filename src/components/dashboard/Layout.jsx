@@ -23,7 +23,7 @@ const Layout = () => {
         {/* Overlay for mobile sidebar */}
         {isSidebarOpen && (
           <div
-            className="fixed inset-0 opacity-50 bg-white z-40 lg:hidden"
+            className="fixed inset-0 opacity-50 bg-back z-40 lg:hidden"
             onClick={closeSidebar}
           />
         )}
