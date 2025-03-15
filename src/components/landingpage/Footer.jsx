@@ -4,7 +4,7 @@ import { FaXTwitter, FaInstagram, FaGoogle, FaGithub } from "react-icons/fa6";
 function Footer() {
   return (
     <div>
-      <div className="flex flex-col justify-center md:flex-row md:justify-between xl:justify-between text-white mx-10 mt-10 pb-10">
+      <div className="flex flex-col justify-center md:flex-row md:justify-between xl:justify-between text-white mx-10 mt-6 pb-6">
         <div className="text-sm mb-3 text-center md:text-left xl:text-left">
           <p>&copy; 2025 BrainStorm.</p>
           <p className="text-textGreen">Powered by MikeBytes Technologies</p>
